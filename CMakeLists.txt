@@ -1,0 +1,78 @@
+cmake_minimum_required(VERSION 3.15)
+project(OOP_arcade_2019)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(core/include)
+include_directories(games/Qix/include)
+include_directories(games/SolarFox/include)
+include_directories(lib/NCurse/include)
+include_directories(lib/opengl/include)
+include_directories(lib/SFML/include)
+
+add_executable(OOP_arcade_2019
+        core/include/Arcade.hpp
+        core/include/arcadeError.hpp
+        core/include/bitmapReader.hpp
+        core/include/Clock.hpp
+        core/include/color.hpp
+        core/include/DLLoader.hpp
+        core/include/GameEngine.hpp
+        core/include/IGameModule.hpp
+        core/include/IGraphicalModule.hpp
+        core/include/Menu.hpp
+        core/include/text.hpp
+        core/src/Arcade.cpp
+        core/src/arcadeError.cpp
+        core/src/bitmapReader.cpp
+        core/src/Clock.cpp
+        core/src/GameEngine.cpp
+        core/src/main.cpp
+        core/src/Menu.cpp
+        games/Qix/include/bitmapReader.hpp
+        games/Qix/include/Clock.hpp
+        games/Qix/include/Fire.hpp
+        games/Qix/include/GameEngine.hpp
+        games/Qix/include/GameObject.hpp
+        games/Qix/include/Map.hpp
+        games/Qix/include/mapData.hpp
+        games/Qix/include/Player.hpp
+        games/Qix/include/qix.hpp
+        games/Qix/include/QixMonster.hpp
+        games/Qix/include/Sparks.hpp
+        games/Qix/src/bitmapReader.cpp
+        games/Qix/src/Clock.cpp
+        games/Qix/src/Fire.cpp
+        games/Qix/src/GameEngine.cpp
+        games/Qix/src/GameObject.cpp
+        games/Qix/src/Map.cpp
+        games/Qix/src/Player.cpp
+        games/Qix/src/qix.cpp
+        games/Qix/src/QixMonster.cpp
+        games/Qix/src/Sparks.cpp
+        games/SolarFox/include/arcadeError.hpp
+        games/SolarFox/include/bitmapReader.hpp
+        games/SolarFox/include/Bullet.hpp
+        games/SolarFox/include/Clock.hpp
+        games/SolarFox/include/Fire.hpp
+        games/SolarFox/include/GameEngine.hpp
+        games/SolarFox/include/Objective.hpp
+        games/SolarFox/include/solarFox.hpp
+        games/SolarFox/include/Starship.hpp
+        games/SolarFox/src/arcadeError.cpp
+        games/SolarFox/src/bitmapReader.cpp
+        games/SolarFox/src/Bullet.cpp
+        games/SolarFox/src/Clock.cpp
+        games/SolarFox/src/Fire.cpp
+        games/SolarFox/src/GameEngine.cpp
+        games/SolarFox/src/Objective.cpp
+        games/SolarFox/src/solarFox.cpp
+        games/SolarFox/src/Starship.cpp
+        lib/NCurse/include/ncurse.hpp
+        lib/NCurse/src/color.cpp
+        lib/NCurse/src/ncurse.cpp
+        lib/opengl/include/opengl.hpp
+        lib/opengl/src/opengl.cpp
+        lib/SFML/include/sfml.hpp
+        lib/SFML/src/sfml.cpp
+        tests/test_bitmap_reader.cpp)
